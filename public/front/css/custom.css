@@ -1,0 +1,96 @@
+.container11 {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.container1 img {
+    width: 100%;
+    height: auto;
+}
+
+.container1 .btn {
+    position: revert;
+    margin-left: -182px;
+    margin-bottom: -54px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: red;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container1 .btn:hover {
+    background-color: black;
+}
+
+.track {
+    /* background: url('https://i.stack.imgur.com/2C22p.jpg') 0 0 no-repeat / cover; */
+    width: 400px;
+    height: 400px;
+    margin: 5px;
+    position: relative;
+    background: url('') 0 0 no-repeat / cover;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.track-info {
+    position: absolute;
+    top: 100%;
+    width: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.track img {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+}
+
+.mar {
+    margin-bottom: 1%;
+    margin-left: 6%;
+    margin-left: 5%;
+}
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .mar {
+        margin: 40px;
+    }
+}
+
+@media only screen and (max-width: 1168px) {
+    .mar {
+        margin-bottom: 1%;
+        margin-left: 7%;
+        margin-left: 7%;
+    }
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
