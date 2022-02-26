@@ -94,14 +94,14 @@
 </div> --}}
 
 
-<div class="container-fluid  p-5">
+<div class="container-fluid  ">
     <div class="row justify-content-center">
         @foreach ($post_img as $item)
 
-        <div class="col-lg-4 col-md-6 col-12 mb-3"  >
+        <div class="col-lg-3 col-md-6 col-12 mb-3"  >
             <div class="" style="background-color: rgb(35, 159, 168)">
             {{-- <h5 class="text-center pt-3">Olive Polyethylene BAC / SANDIK</h5> --}}
-            <img src="{{url($item->img)}}" class="w-100 cust-hght" alt="">
+            <img src="{{url($item->img)}}" class="w-100 " alt="">
         </div>
 
         </div>

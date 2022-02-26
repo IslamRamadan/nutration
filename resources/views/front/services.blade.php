@@ -28,23 +28,26 @@
             <!--form-box-->
             <div class="form-box default-form">
                 <div class="contact-form default-form">
-                    <form method="post" action="sendemail.php" id="contact-form" novalidate="novalidate">
+                    <form method="post" action="{{route('service.store')}}" >
+                    {{ csrf_field() }}
+
                         <div class="row clearfix">
 
                             <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="username" value="" placeholder="{{__('site.name')}}" required="">
+                                <input type="text" name="name" value="{{old('name')}}" placeholder="{{__('site.name')}}" required="">
                             </div>
 
                             <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="phone" value="" placeholder="{{__('site.phone')}}">
+                                <input type="number" name="phone" value="{{old('phone')}}" placeholder="{{__('site.phone')}}">
                             </div>
 
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                <textarea name="message" placeholder="{{__('site.message')}}"></textarea>
+                                <textarea name="content" placeholder="{{__('site.message')}}">{{old('content')}}</textarea>
                             </div>
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                 <button type="submit" class="theme-btn btn-style-one">@lang('site.send')</button>
                             </div>
+                            <input type="hidden" name="type" value="0">
                         </div>
                     </form>
                 </div>
@@ -68,19 +71,21 @@
             <!--form-box-->
             <div class="form-box default-form">
                 <div class="contact-form default-form">
-                    <form method="post" action="sendemail.php" id="contact-form" novalidate="novalidate">
-                        <div class="row clearfix">
+                    <form method="post" action="{{route('service.store')}}" >
+                        {{ csrf_field() }}
+                            <div class="row clearfix">
+                            <input type="hidden" name="type" value="1">
 
                             <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="username" value="" placeholder="{{__('site.name')}}" required="">
+                                <input type="text" name="name" value="{{old('name')}}" placeholder="{{__('site.name')}}" required="">
                             </div>
 
                             <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="phone" value="" placeholder="{{__('site.phone')}}">
+                                <input type="text" name="phone" value="{{old('phone')}}" placeholder="{{__('site.phone')}}">
                             </div>
 
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                <textarea name="message" placeholder="{{__('site.food_system')}}"></textarea>
+                                <textarea name="content" placeholder="{{__('site.food_system')}}">{{old('content')}}</textarea>
                             </div>
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                 <button type="submit" class="theme-btn btn-style-one">@lang('site.send')</button>
@@ -107,28 +112,30 @@
             <!--form-box-->
             <div class="form-box default-form">
                 <div class="contact-form default-form">
-                    <form method="post" action="sendemail.php" id="contact-form" novalidate="novalidate">
-                        <div class="row clearfix">
+                    <form method="post" action="{{route('service.store')}}" >
+                        {{ csrf_field() }}
+                            <div class="row clearfix">
+                            <input type="hidden" name="type" value="2">
 
                             <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="username" value="" placeholder="{{__('site.name')}}" required="">
+                                <input type="text" name="name" value="{{old('name')}}" placeholder="{{__('site.name')}}" required="">
                             </div>
 
                             <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="phone" value="" placeholder="{{__('site.phone')}}">
+                                <input type="text" name="phone" value="{{old('phone')}}" step="0.01" placeholder="{{__('site.phone')}}">
                             </div>
                             <div class="form-group col-md-4 col-sm-4 col-xs-6">
-                                <input type="text" name="age" value="" placeholder="{{__('site.age')}}">
+                                <input type="number" name="age" value="{{old('age')}}" step="0.01" placeholder="{{__('site.age')}}">
                             </div>
                             <div class="form-group col-md-4 col-sm-4 col-xs-6">
-                                <input type="text" name="tall" value="" placeholder="{{__('site.tall')}}">
+                                <input type="number" name="height" value="{{old('height')}}" step="0.01" placeholder="{{__('site.tall')}}">
                             </div>
                             <div class="form-group col-md-4 col-sm-4 col-xs-6">
-                                <input type="text" name="weight" value="" placeholder="{{__('site.weight')}}">
+                                <input type="number" name="weight" value="{{old('weight')}}" step="0.01" placeholder="{{__('site.weight')}}">
                             </div>
 
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                <textarea name="message" placeholder="{{__('site.food_routine')}}"></textarea>
+                                <textarea name="content" placeholder="{{__('site.food_routine')}}">{{old('content')}}</textarea>
                             </div>
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                 <button type="submit" class="theme-btn btn-style-one">@lang('site.send')</button>
@@ -156,19 +163,21 @@
             <!--form-box-->
             <div class="form-box default-form">
                 <div class="contact-form default-form">
-                    <form method="post" action="sendemail.php" id="contact-form" novalidate="novalidate">
-                        <div class="row clearfix">
+                    <form method="post" action="{{route('service.store')}}" >
+                        {{ csrf_field() }}
+                            <div class="row clearfix">
+                            <input type="hidden" name="type" value="3">
 
                             <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="username" value="" placeholder="{{__('site.name')}}" required="">
+                                <input type="text" name="name" value="{{old('name')}}" placeholder="{{__('site.name')}}" required="">
                             </div>
 
                             <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" name="phone" value="" placeholder="{{__('site.phone')}}">
+                                <input type="text" name="phone" value="{{old('phone')}}" placeholder="{{__('site.phone')}}">
                             </div>
 
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                <textarea name="message" placeholder="{{__('site.notice')}}"></textarea>
+                                <textarea name="content" placeholder="{{__('site.notice')}}">{{old('content')}}</textarea>
                             </div>
                             <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                 <button type="submit" class="theme-btn btn-style-one">@lang('site.send')</button>

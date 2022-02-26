@@ -31,7 +31,7 @@ class settingController extends Controller
     }
     public function show_contact(){
 
-        $contacts = Contact::paginate();
+        $contacts = Contact::orderBy('created_at','DESC')->paginate(10);
         return view("/dashboard/contacts/index",["contacts"=>  $contacts  ]);
 
 

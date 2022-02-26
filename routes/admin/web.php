@@ -49,6 +49,12 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
 
             Route::get('/galaries/{id}', 'galaryController@index')->name("galaries.index");
             Route::get('/sliders/vendor/{id}', 'galaryController@vendor')->name("slider.vendor");
+            Route::get('/calories_calc', 'ServiceController@calories_calc')->name("calories.calc");
+            Route::get('/nutrition_specialist', 'ServiceController@nutrition_specialist')->name("nutrition.specialist");
+            Route::get('/diet_order', 'ServiceController@diet_order')->name("diet.order");
+            Route::get('/home_coach', 'ServiceController@home_coach')->name("home.coach");
+            Route::get('/service_show/{id}', 'ServiceController@service_show')->name("service.show");
+            Route::delete('/service_destroy/{id}', 'ServiceController@service_destroy')->name("service.destroy");
             // Route::post('/galaries/store/{id}', 'galaryController@store')->name("galaries.store");
             Route::post('/slider/vendor/store/{id}', 'galaryController@vendor_store')->name("slider.vendor.store");
 

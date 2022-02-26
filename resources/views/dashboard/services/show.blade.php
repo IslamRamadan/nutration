@@ -12,28 +12,115 @@
     @lang("site.services")
 
 @endsection
-<div class="row">
-    @if(Lang::locale()=='ar')
-        <h1>{{$service->name_ar}}</h1>
-
-    @else
-        <h1>{{$service->name_en}}</h1>
+<section class="content">
 
 
-    @endif
 
-</div>
-<div class="row">
-    <div class="col-4 m-2">
 
-        @foreach($service_images as $service_image)
-            {{--    {{$service_image->img}}--}}
 
-            <img src="{{asset('myfiles/'.$service_image->img)}}" alt="" width="500px" height="300px">
-        @endforeach
 
+    <div class="box box-primary">
+
+
+
+
+        <div class="box-header">
+
+
+
+        </div><!-- end of box header -->
+
+        <div class="row">
+            <div class="col-md-8">
+        <div class="box-body">
+
+
+
+
+                    <div class="form-group">
+                        <label>{{__('site.name')}}</label>
+
+                        <p>
+                            {{$service->name}}
+                        </p>
+
+                    </div>
+                    <div class="form-group">
+                        <label>{{__('site.phone')}}</label>
+
+                        <p>
+                            {{$service->phone}}
+                        </p>
+
+                    </div>
+                    @if ($service->type==2)
+
+                    <div class="form-group">
+                        <label>{{__('site.age')}}</label>
+
+                        <p>
+                            {{$service->age}}
+                        </p>
+
+                    </div>
+                    <div class="form-group">
+                        <label>{{__('site.tall')}}</label>
+
+                        <p>
+                            {{$service->height}}
+                        </p>
+
+                    </div>
+                    <div class="form-group">
+                        <label>{{__('site.weight')}}</label>
+
+                        <p>
+                            {{$service->weight}}
+                        </p>
+
+                    </div>
+                    @endif
+                    <div class="form-group">
+                        @if ($service->type==0)
+                        <label>وصف الوجبة(الكميات)</label>
+                        @elseif ($service->type==1)
+                        <label>النظام الغذائي</label>
+                        @elseif ($service->type==2)
+                        <label>الروتين الغذائي اليومي(عدد الوجبات و الكميات)</label>
+                        @else
+                        <label>ملاحظات</label>
+                        @endif
+
+                        <p>
+                            {{$service->content}}
+                        </p>
+
+                    </div>
+
+
+
+
+
+
+
+
+        </div><!-- end of box body -->
     </div>
+
 </div>
+
+    </div><!-- end of box -->
+
+
+
+
+
+    </section>
+
+
+
+
+
 
 
 

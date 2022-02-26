@@ -997,6 +997,7 @@
         
         .default-form input[type="text"],
         .default-form input[type="email"],
+        .default-form input[type="number"],
         .default-form input[type="password"],
         .default-form select,
         .default-form textarea {

@@ -140,7 +140,7 @@ box-shadow: -1px 6px 40px -9px rgba(0,0,0,0.75);
         <a href="" class="logo">
             {{--<!-- mini logo for sidebar mini 50x50 pixels -->--}}
             <span class="logo-mini">{{ request()->user()->name }}</span>
-            <span class="logo-lg"><span style="font-weight: bold">   @lang("Carbon")
+            <span class="logo-lg"><span style="font-weight: bold">   @lang("Life")
              </span></span>
         </a>
 

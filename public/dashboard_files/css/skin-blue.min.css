@@ -1,5 +1,5 @@
 .skin-blue .main-header .navbar {
-    background-color: #37937e
+    background-color: #c98863
 }
 
 .skin-blue .main-header .navbar .nav>li>a {
@@ -30,7 +30,7 @@
 }
 
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-    background-color: #37937e
+    background-color: #c98863
 }
 
 @media (max-width:767px) {
@@ -41,12 +41,12 @@
         color: #fff
     }
     .skin-blue .main-header .navbar .dropdown-menu li a:hover {
-        background: #37937e
+        background: #c98863
     }
 }
 
 .skin-blue .main-header .logo {
-    background-color: #37937e;
+    background-color: #c98863;
     color: #fff;
     border-bottom: 0 solid transparent
 }
@@ -56,7 +56,7 @@
 }
 
 .skin-blue .main-header li.user-header {
-    background-color: #37937e
+    background-color: #c98863
 }
 
 .skin-blue .content-header {
@@ -87,7 +87,7 @@
 .skin-blue .sidebar-menu>li.active>a {
     color: #fff;
     background: #1e282c;
-    border-left-color: #37937e
+    border-left-color: #c98863
 }
 
 .skin-blue .sidebar-menu>li>.treeview-menu {
@@ -156,19 +156,19 @@
 }
 
 .skin-blue.layout-top-nav .main-header>.logo {
-    background-color: #37937e;
+    background-color: #c98863;
     color: #fff;
     border-bottom: 0 solid transparent
 }
 
 .skin-blue.layout-top-nav .main-header>.logo:hover {
-    background-color: #3b8ab8
+    background-color: #c98863
 }
 
 thead {
-    background: #37937e !important;
+    background: #c98863 !important;
 }
 
 a:hover {
-    background: #37937e !important;
+    background: #c98863 !important;
 }
