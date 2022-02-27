@@ -71,7 +71,9 @@
 
         <div class="form-group">
             <label>@lang('site.about_img')</label>
-            <input type="file" class="form-control" name="about_img1">
+            {{-- <input type="file" class="form-control" name="about_img1"> --}}
+            <a href="{{url(route("section_galaries.index",0)) }}" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> @lang('اضافه صور متعدده هنا')</a>
+
         </div>
         {{-- <img src="{{ asset('/storage/' . $section->img) }}" alt="" width="50%"> --}}
 
@@ -94,7 +96,7 @@
 
         <div class="form-group">
             <label>@lang('site.service_img')</label>
-            <input type="file" class="form-control" name="service_img1">
+            <a href="{{url(route("section_galaries.index",1)) }}" class="btn btn-success btn-sm"><i class="fa fa-edit"></i> @lang('اضافه صور متعدده هنا')</a>
         </div>
         {{-- <img src="{{ asset('/storage/' . $section->img) }}" alt="" width="50%"> --}}
 

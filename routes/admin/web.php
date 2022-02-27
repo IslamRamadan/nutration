@@ -82,6 +82,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
                 Route::post('/post_galaries/store/{id}', 'postGalaryController@store')->name("post_galaries.store");
                 Route::delete('/post_galaries/destroy/{id}', 'postGalaryController@destroy')->name("post_galaries.destroy");
                 // Route::get('/service_galaries/{id}', 'serviceGalaryController@index')->name("service_galaries.index");
+                Route::get('/section_galaries/{type}', 'sectionGalaryController@index')->name("section_galaries.index");
+                Route::post('/section_galaries/store/{type}', 'sectionGalaryController@store')->name("section_galaries.store");
+                Route::delete('/section_galaries/destroy/{id}', 'sectionGalaryController@destroy')->name("section_galaries.destroy");
+                // Route::get('/service_galaries/{id}', 'serviceGalaryController@index')->name("service_galaries.index");
                 // Route::get('/client_galaries', 'clientGalaryController@index')->name("client_galaries.index");
                 // Route::post('/client_galaries/store', 'clientGalaryController@store')->name("client_galaries.store");
                 // Route::delete('/client_galaries/destroy/{id}', 'clientGalaryController@destroy')->name("client_galaries.destroy");

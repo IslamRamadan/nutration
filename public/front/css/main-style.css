@@ -17,6 +17,11 @@
             src: url('../css/fonts/JosefinSans-Regular.ttf');
         }
         
+        @font-face {
+            font-family: "Times Roman";
+            src: url('../css/fonts/times-new-roman-bold.ttf');
+        }
+        
         body {
             font-family: "Josefin Sans", Arial, sans-serif !important;
             /* text-transform: capitalize; */
@@ -25,7 +30,8 @@
         }
         
         body:lang(ar) {
-            font-family: 'Almarai', sans-serif !important;
+            /* font-family: 'Almarai', sans-serif !important; */
+            font-family: "Times Roman", sans-serif !important;
         }
         
         .arabic {
@@ -600,10 +606,11 @@
         
         .news-hr .news-post-hr {
             display: flex;
+            margin: 10px;
         }
         
         .news-hr .news-post-hr .post-thumb {
-            flex-basis: 50%;
+            /* flex-basis: 50%; */
             align-self: center;
         }
         
@@ -612,7 +619,7 @@
         }
         
         .news-hr .news-post-hr .post-contents {
-            flex-basis: 50%;
+            /* flex-basis: 50%; */
             padding: 30px;
             position: relative;
             border-right: 1px solid;
@@ -629,7 +636,7 @@
             text-transform: uppercase;
             font-weight: 400;
             position: relative;
-            font-size: 23px;
+            font-size: 25px;
             color: #222222;
         }
         
@@ -644,7 +651,7 @@
         }
         
         .news-hr .news-post-hr .post-contents .post-exerpts p {
-            font-size: 20px;
+            font-size: 17px;
         }
         
         .news-hr .news-post-hr .post-contents .date {
@@ -1006,7 +1013,7 @@
             line-height: 24px;
             height: 50px;
             font-size: 14px;
-            border: 1px solid #f0f0f0;
+            border: 1px solid #1d1b1b;
             padding: 12px 15px;
             background-color: #ffffff;
             color: #111111;
@@ -1027,7 +1034,7 @@
             line-height: 24px;
             height: 50px;
             font-size: 14px;
-            border: 1px solid #f0f0f0;
+            border: 1px solid #363030;
             padding: 12px 15px;
             background-color: #ffffff;
             color: #111111;
@@ -1057,7 +1064,7 @@
             line-height: 24px;
             height: 50px;
             font-size: 14px;
-            border: 1px solid #f0f0f0;
+            border: 1px solid #383232;
             padding: 12px 15px;
             background-color: #ffffff;
             color: #111111;

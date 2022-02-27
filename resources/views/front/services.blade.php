@@ -18,7 +18,7 @@
 <div class="container contact-section">
 
 
-    <div class="row clearfix">
+    <div class="row justify-content-center clearfix">
 
         <!--Form Column -->
         <div class="column form-column pull-right col-lg-8 col-md-12 col-sm-12 col-xs-12">
@@ -60,7 +60,7 @@
 <div class="container contact-section">
 
 
-    <div class="row clearfix">
+    <div class="row justify-content-center clearfix">
 
         <!--Form Column -->
         <div class="column form-column pull-right col-lg-8 col-md-12 col-sm-12 col-xs-12">
@@ -102,7 +102,7 @@
 <div class="container contact-section">
 
 
-    <div class="row clearfix">
+    <div class="row justify-content-center clearfix">
 
         <!--Form Column -->
         <div class="column form-column pull-right col-lg-8 col-md-12 col-sm-12 col-xs-12">
@@ -153,7 +153,7 @@
 <div class="container contact-section">
 
 
-    <div class="row clearfix">
+    <div class="row justify-content-center clearfix">
 
         <!--Form Column -->
         <div class="column form-column pull-right col-lg-8 col-md-12 col-sm-12 col-xs-12">
