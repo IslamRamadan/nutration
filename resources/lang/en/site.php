@@ -207,7 +207,7 @@ Why Spend So Much Time And Energy On Home Cleaning When You Can Have A Cleaning 
 'home_coach'=>'Home Coach',
 'diet_order'=>'Diet orders',
 'nutrition_specialist'=>'Nutrition specialist',
-// 'web_en'=>'',
+'follow_us'=>'Follow us',
 // 'last_title_ar'=>'',
 // 'last_title_en'=>'',
 // 'last_name_ar'=>'',

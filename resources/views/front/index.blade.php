@@ -69,7 +69,8 @@
                         @endphp
                         @foreach (App\Models\SectionImg::where('type', 0)->get() as $one)
                             <div class="carousel-item  @if ($i == 0) active @endif ">
-                                <img class=" w-100  " src="{{ asset($one->img) }}" alt="1 slide">
+                                <img class=" w-100 img-modal" src="{{ asset($one->img) }}" alt="1 slide"
+                                    >
 
                             </div>
                             @php
@@ -125,7 +126,9 @@
                         @endphp
                         @foreach (App\Models\SectionImg::where('type', 1)->get() as $one)
                             <div class="carousel-item  @if ($i == 0) active @endif ">
-                                <img class=" w-100  " src="{{ asset($one->img) }}" alt="1 slide">
+                                {{-- <a href="{{ asset($one->img) }}" target="_blank"> --}}
+                                    <img  class=" w-100 img-modal " src="{{ asset($one->img) }}" alt="1 slide">
+                                {{-- </a> --}}
 
                             </div>
                             @php
@@ -159,7 +162,7 @@
     @if (count($social) > 0)
         <div class="container text-center center-p">
 
-            <h1>@lang('site.social')</h1>
+            <h1 id="hhh">@lang('site.social')</h1>
             {{-- <div class="separator back-center"></div> --}}
         </div>
         <div class="container-fluid mb-3">
@@ -185,69 +188,61 @@
         </div>
     @endif
 
+
+    <!-- Trigger the Modal -->
+
+    <!-- The Modal -->
+    <div id="myModal11" class="modal11">
+
+        <!-- The Close Button -->
+        <span class="close11">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content11" id="img0111">
+
+        <!-- Modal Caption (Image Text) -->
+    </div>
+
 @endsection
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-{{-- <script> --}}
-{{--  --}}
-{{--  --}}
-{{-- $('img[data-enlargeable]').addClass('img-enlargeable').click(function() { --}}
-{{-- var src = $(this).attr('src'); --}}
-{{-- var modal; --}}
-
-{{-- function removeModal() { --}}
-{{-- modal.remove(); --}}
-{{-- $('body').off('keyup.modal-close'); --}}
-{{-- } --}}
-{{-- modal = $('<div>').css({ --}}
-{{-- background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center', --}}
-{{-- backgroundSize: 'contain', --}}
-{{-- width: '100%', --}}
-{{-- height: '100%', --}}
-{{-- position: 'fixed', --}}
-{{-- zIndex: '10000', --}}
-{{-- top: '0', --}}
-{{-- left: '0', --}}
-{{-- cursor: 'zoom-out' --}}
-{{-- }).click(function() { --}}
-{{-- removeModal(); --}}
-{{-- }).appendTo('body'); --}}
-{{-- //handling ESC --}}
-{{-- $('body').on('keyup.modal-close', function(e) { --}}
-{{-- if (e.key === 'Escape') { --}}
-{{-- removeModal(); --}}
-{{-- } --}}
-{{-- }); --}}
-{{-- }); --}}
-{{-- </script> --}}
-{{-- <script> --}}
-{{-- const image = document.querySelector(".clickable-image"); --}}
-
-{{-- image.addEventListener("click", function(){ --}}
-{{-- image.classList.add("image-open"); --}}
-{{-- }) --}}
-{{-- </script> --}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
+    $(document).ready(function() {
 
+
+    // Get the modal
+    var modal = document.getElementById("myModal11");
+    var img = $('#myImg').val()
     // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById("myImg");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    img.onclick = function() {
+    // var img = document.getElementById("myImg");
+    // var img = document.getElementsByClassName("myImg");
+    console.log(`Hello`);
+    console.log(img);
+    var modalImg = document.getElementById("img0111");
+
+    $(".img-modal").click(function() {
+        console.log('click on img');
         modal.style.display = "block";
         modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-    }
+    });
+    $("#hhh").click(function() {
+        console.log('click on img');
+
+    });
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close11")[0];
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
+    // span.onclick = function() {
+    //     modal.style.display = "none";
+    // }
+    $(span).click(function() {
         modal.style.display = "none";
-    }
+
+    });
+});
+
 </script>

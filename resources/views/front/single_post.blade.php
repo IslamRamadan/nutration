@@ -9,12 +9,43 @@
 
     <!-----start carousel --->
 
-<div  class=" relative1 " >
+{{-- <div  class=" relative1 " >
     <div class="abs w-100">
         <h4 class="custom-h4">@lang('site.post')</h4>
         <h1>{!!$post['title_'.app()->getLocale()]!!}</h1>
 
     </div>
+</div> --}}
+<div id="carouselExampleIndicators1" class="carousel slide relative" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        @php
+            $i = 0;
+        @endphp
+        @foreach ($post_img as $one)
+            <div class="carousel-item  @if ($i == 0) active @endif ">
+                <img class=" w-100  " src="{{ asset($one->img) }}" alt="1 slide">
+
+            </div>
+            @php
+                $i++;
+            @endphp
+        @endforeach
+
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 
 <section class="news section">
@@ -94,13 +125,12 @@
 </div> --}}
 
 
-<div class="container-fluid  ">
+{{-- <div class="container-fluid  ">
     <div class="row justify-content-center">
         @foreach ($post_img as $item)
 
         <div class="col-lg-3 col-md-6 col-12 mb-3"  >
             <div class="" style="background-color: rgb(35, 159, 168)">
-            {{-- <h5 class="text-center pt-3">Olive Polyethylene BAC / SANDIK</h5> --}}
             <img src="{{url($item->img)}}" class="w-100 " alt="">
         </div>
 
@@ -108,24 +138,10 @@
 
         @endforeach
 
-
-        {{-- <div class="col-lg-4 col-md-6 col-12 mb-3"  >
-            <div class="" style="background-color: rgb(15, 128, 99)">
-            <h5 class="text-center pt-3">Olive Polyethylene BAC / SANDIK</h5>
-            <img src="{{url('front/img/22.webp')}}" class="w-100 cust-hght" alt="">
-        </div>
-
-        </div>
-        <div class="col-lg-4 col-md-6 col-12 mb-3"  >
-            <div class="" style="background-color: rgb(32, 134, 194)">
-            <h5 class="text-center pt-3">Olive Polyethylene BAC / SANDIK</h5>
-            <img src="{{url('front/img/23.webp')}}" class="w-100 cust-hght" alt="">
-        </div> --}}
-
         </div>
 
     </div>
-</div>
+</div> --}}
 
                         </div>
 

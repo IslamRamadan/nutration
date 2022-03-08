@@ -73,7 +73,9 @@ class homeController extends Controller
     }
     public function about()
     {
-        return view('front.about');
+        $section = Section::first();
+
+        return view('front.about',compact('section'));
     }
 
     public function contacts_index()

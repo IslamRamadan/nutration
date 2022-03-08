@@ -77,8 +77,8 @@ class postGalaryController extends Controller
             $new_name_img = time().uniqid().".".$img->getClientOriginalExtension();
 
             //move img to folder
-            $img1 = \Image::make($img)->resize(255 , 200);
-            $img1->save(public_path('upload/advertising/'.$new_name_img),80);
+            $img1 = \Image::make($img);
+            $img1->save(public_path('upload/advertising/'.$new_name_img),70);
             // $img->move(public_path("upload/advertising"), $new_name_img);
 
             $post= PostImg::create([

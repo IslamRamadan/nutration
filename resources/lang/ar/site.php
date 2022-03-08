@@ -253,7 +253,7 @@ return [
     'diet_order'=>'طلبات الانظمة الغذائيه',
     'nutrition_specialist'=>'طلبات أخصائي التغذية',
     'section_galary'=>'اضافه صور',
-    // 'appear'=>'ظاهر',
+    'follow_us'=>'تابعنا',
     // 'appear'=>'ظاهر',
     // 'appear'=>'ظاهر',
     // 'appear'=>'ظاهر',
