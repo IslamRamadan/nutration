@@ -81,6 +81,18 @@ class ServiceController extends Controller
         })->paginate(15);
         return view("/dashboard/services/home_coach", ["services" =>  $services]);
     }
+    public function boquet_order(Request $request)
+    {
+        $services = Service::orderby('created_at', 'DESC')->where('type', 4)->where(function ($query) use ($request) {
+            if ($request->input('search')) {
+                $query->where(function ($query) use ($request) {
+                    $query->where('name', 'like', '%' . $request->search . '%')
+                        ->orWhere('phone', 'like', '%' . $request->search . '%');
+                });
+            }
+        })->paginate(15);
+        return view("/dashboard/services/boquet", ["services" =>  $services]);
+    }
     public function service_show($id)
     {
         $service = Service::find($id);
@@ -100,6 +112,9 @@ class ServiceController extends Controller
             return redirect()->route('nutrition.specialist');
         } elseif ($type == 2) {
             return redirect()->route('diet.order');
+        }
+        elseif ($type == 4) {
+            return redirect()->route('boquet_order');
         } else {
             return redirect()->route('home.coach');
         }

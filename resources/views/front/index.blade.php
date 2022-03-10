@@ -99,8 +99,9 @@
         </div>
     </div>
     <div class="container text-center center-p">
-
-        <h1>@lang('site.services')</h1>
+        <a href="{{route('services')}}" class="cus-a">
+            <h1>@lang('site.services')</h1>
+        </a>
         {{-- <div class="separator back-center"></div> --}}
 
 
@@ -150,8 +151,9 @@
 
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 sm-m">
-
-                {!! $section['service_content_' . app()->getLocale()] !!}
+                <a href="{{route('services')}}" class="cus-a">
+                    {!! $section['service_content_' . app()->getLocale()] !!}
+                </a>
 
             </div>
 
@@ -191,58 +193,6 @@
 
     <!-- Trigger the Modal -->
 
-    <!-- The Modal -->
-    <div id="myModal11" class="modal11">
-
-        <!-- The Close Button -->
-        <span class="close11">&times;</span>
-
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content11" id="img0111">
-
-        <!-- Modal Caption (Image Text) -->
-    </div>
 
 @endsection
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-
-
-    // Get the modal
-    var modal = document.getElementById("myModal11");
-    var img = $('#myImg').val()
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    // var img = document.getElementById("myImg");
-    // var img = document.getElementsByClassName("myImg");
-    console.log(`Hello`);
-    console.log(img);
-    var modalImg = document.getElementById("img0111");
-
-    $(".img-modal").click(function() {
-        console.log('click on img');
-        modal.style.display = "block";
-        modalImg.src = this.src;
-    });
-    $("#hhh").click(function() {
-        console.log('click on img');
-
-    });
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close11")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    // span.onclick = function() {
-    //     modal.style.display = "none";
-    // }
-    $(span).click(function() {
-        modal.style.display = "none";
-
-    });
-});
-
-</script>

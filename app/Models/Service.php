@@ -8,6 +8,9 @@ class Service extends Model
 {
     protected $table = 'services';
     protected $fillable = [
-        'name','type','age','height','weight','content','phone'
+        'name','type','age','height','weight','content','phone','email','boquet_id'
     ];
+    public function boquet(){
+        return $this->belongsTo('App\Models\Boquet' , 'boquet_id' , 'id');
+    }
 }

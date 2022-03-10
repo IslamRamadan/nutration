@@ -38,6 +38,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
                 Route::get('/settings', 'settingController@index')->name('settings.index');
                 Route::get('/sections', 'sectionController@index')->name('sections.index');
                 Route::get('/contact', 'settingController@show_contact')->name('contact.index');
+                Route::resource('boquets', 'boquetController');
+                Route::post('custom_boquets/update/{id}', 'boquetController@updateBoquet')->name('boquets.update.boquet');
 
 
 
@@ -53,6 +55,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
             Route::get('/nutrition_specialist', 'ServiceController@nutrition_specialist')->name("nutrition.specialist");
             Route::get('/diet_order', 'ServiceController@diet_order')->name("diet.order");
             Route::get('/home_coach', 'ServiceController@home_coach')->name("home.coach");
+            Route::get('/boquet_order', 'ServiceController@boquet_order')->name("boquet_order");
             Route::get('/service_show/{id}', 'ServiceController@service_show')->name("service.show");
             Route::delete('/service_destroy/{id}', 'ServiceController@service_destroy')->name("service.destroy");
             // Route::post('/galaries/store/{id}', 'galaryController@store')->name("galaries.store");
@@ -75,7 +78,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
                 // Route::resource('/projects', 'ProjectController');
                 // Route::resource('/plans', 'PlanController');
                 Route::resource('social', 'SocialController');
-                Route::post('custom_products/update/{id}', 'SocialController@updateSocial')->name('socials.update.social');
+                Route::post('custom_socials/update/{id}', 'SocialController@updateSocial')->name('socials.update.social');
                 Route::post('custom_services/update/{id}', 'ServiceController@updateService')->name('services.update.service');
                 Route::post('custom_categories/update/{id}', 'CategoryController@updateCategory')->name('categories.update.category');
                 Route::get('/post_galaries/{id}', 'postGalaryController@index')->name("post_galaries.index");

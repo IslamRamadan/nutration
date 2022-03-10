@@ -22,6 +22,7 @@ use  App\Models\Slider;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Alert;
+use App\Models\Boquet;
 use App\Models\Section;
 use App\Models\Service;
 use App\Models\Social;
@@ -81,6 +82,11 @@ class homeController extends Controller
     public function contacts_index()
     {
         return view('front.contact');
+    }
+    public function bouquet()
+    {
+        $bouquets=Boquet::where('appearance',1)->get();
+        return view('front.bouquet',compact('bouquets'));
     }
 
     public function contacts_store(Request $request)

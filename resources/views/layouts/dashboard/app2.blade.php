@@ -45,6 +45,9 @@
                 <li class="moha"><a style="" href="{{ route('posts.index') }}"><i
                             class="fa fa-list"></i>
                         <span>@lang('site.posts') </span></a></li>
+                <li class="moha"><a style="" href="{{ route('boquets.index') }}"><i
+                            class="fa fa-list"></i>
+                        <span>@lang('site.boquets') </span></a></li>
 
 
                 <li class="moha"><a style="" href="{{ route('sections.index') }}"><i
@@ -55,8 +58,10 @@
                             class="fa fa-list"></i> <span> @lang('site.nutrition_specialist') </span></a></li>
                 <li class="moha"><a style="" href="{{ route('diet.order') }}"><i class="fa fa-list"></i>
                         <span> @lang('site.diet_order') </span></a></li>
-                <li class="moha"><a style="" href="{{ route('home.coach') }}"><i
-                            class="fa fa-list"></i> <span> @lang('site.home_coach') </span></a></li>
+                <li class="moha"><a style="" href="{{ route('boquet_order') }}"><i class="fa fa-list"></i>
+                        <span> @lang('طلبات الباقات') </span></a></li>
+                {{-- <li class="moha"><a style="" href="{{ route('home.coach') }}"><i
+                            class="fa fa-list"></i> <span> @lang('site.home_coach') </span></a></li> --}}
                 <li class="moha"><a style="" href="{{ route('settings.index') }}"><i
                             class="fa fa-list"></i> <span> @lang('site.settings') </span></a></li>
                 <li class="moha"><a style="" href="{{ route('contact.index') }}"><i

@@ -1,4 +1,3 @@
-
 @extends('layouts.dashboard.app2')
 @section('title')
     @lang("services")
@@ -10,7 +9,6 @@
 
 @section('ti')
     @lang("site.services")
-
 @endsection
 <section class="content">
 
@@ -32,67 +30,88 @@
 
         <div class="row">
             <div class="col-md-8">
-        <div class="box-body">
+                <div class="box-body">
 
 
 
 
                     <div class="form-group">
-                        <label>{{__('site.name')}}</label>
+                        <label>{{ __('site.name') }}</label>
 
                         <p>
-                            {{$service->name}}
+                            {{ $service->name }}
                         </p>
 
                     </div>
                     <div class="form-group">
-                        <label>{{__('site.phone')}}</label>
+                        <label>{{ __('site.phone') }}</label>
 
                         <p>
-                            {{$service->phone}}
+                            {{ $service->phone }}
                         </p>
 
                     </div>
-                    @if ($service->type==2)
-
+                    @if ($service->type == 4)
                     <div class="form-group">
-                        <label>{{__('site.age')}}</label>
+                        <label>{{ __('site.email') }}</label>
 
                         <p>
-                            {{$service->age}}
+                            {{ $service->email }}
                         </p>
 
                     </div>
-                    <div class="form-group">
-                        <label>{{__('site.tall')}}</label>
+                        <div class="form-group">
+                            <label>{{ __('اسم الباقه') }}</label>
 
-                        <p>
-                            {{$service->height}}
-                        </p>
+                            <p>
+                                @isset($service->boquet->id)
+                                    {{ $service->boquet->title_ar }}
+                                @else
+                                    -
+                                @endisset
+                            </p>
 
-                    </div>
-                    <div class="form-group">
-                        <label>{{__('site.weight')}}</label>
+                        </div>
+                    @endif
+                    @if ($service->type == 2||$service->type == 4)
+                        <div class="form-group">
+                            <label>{{ __('site.age') }}</label>
 
-                        <p>
-                            {{$service->weight}}
-                        </p>
+                            <p>
+                                {{ $service->age }}
+                            </p>
 
-                    </div>
+                        </div>
+                        <div class="form-group">
+                            <label>{{ __('site.tall') }}</label>
+
+                            <p>
+                                {{ $service->height }}
+                            </p>
+
+                        </div>
+                        <div class="form-group">
+                            <label>{{ __('site.weight') }}</label>
+
+                            <p>
+                                {{ $service->weight }}
+                            </p>
+
+                        </div>
                     @endif
                     <div class="form-group">
-                        @if ($service->type==0)
-                        <label>وصف الوجبة(الكميات)</label>
-                        @elseif ($service->type==1)
-                        <label>النظام الغذائي</label>
-                        @elseif ($service->type==2)
-                        <label>الروتين الغذائي اليومي(عدد الوجبات و الكميات)</label>
+                        @if ($service->type == 0)
+                            <label>وصف الوجبة(الكميات)</label>
+                        @elseif ($service->type == 1)
+                            <label>النظام الغذائي</label>
+                        @elseif ($service->type == 2)
+                            <label>الروتين الغذائي اليومي(عدد الوجبات و الكميات)</label>
                         @else
-                        <label>ملاحظات</label>
+                            <label>ملاحظات</label>
                         @endif
 
                         <p>
-                            {{$service->content}}
+                            {{ $service->content }}
                         </p>
 
                     </div>
@@ -104,10 +123,10 @@
 
 
 
-        </div><!-- end of box body -->
-    </div>
+                </div><!-- end of box body -->
+            </div>
 
-</div>
+        </div>
 
     </div><!-- end of box -->
 
@@ -115,7 +134,7 @@
 
 
 
-    </section>
+</section>
 
 
 

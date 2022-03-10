@@ -25,6 +25,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     Route::get('/category/{id}', 'front\homeController@category_show')->name('category.show');
 
     Route::get('/services', 'front\homeController@services')->name('services');
+    Route::get('/bouquet', 'front\homeController@bouquet')->name('bouquet');
     Route::post('/s_store', 'front\homeController@service_store')->name('service.store');
     Route::get('/product/{id}', 'front\homeController@single_product')->name('product.show');
     Route::get('/all_posts', 'front\homeController@all_posts')->name('all_posts');

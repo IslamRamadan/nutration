@@ -27,39 +27,9 @@
 @endif
 @include('sweetalert::alert')
 
-<div class="container-fluid pad-0 bg-main  ">
-    <div class="container  ">
-        <div class="float-left">
-            <nav class="navbar navbar-expand pad-0 " >
-                <ul class="navbar-nav  pad-0">
-
-                    <li class="nav-item ">
-                        <a href="tel:{{$my_setting->contact_phone}}" title="" class="nav-link "> <i class="fas fa-phone"></i>  {{$my_setting->contact_phone}}</a></li>
-                    <li class="nav-item ">
-                        <a href="https://wa.me/{{$my_setting->wats}}" title="" class="nav-link "> <i class="fab fa-whatsapp"></i>  {{$my_setting->wats}}</a>
-                    </li></ul>
-            </nav>
-        </div>
-        <div class="float-right text-dir">
-            <nav class="navbar navbar-expand pad-0 " >
-                <ul class="navbar-nav pad-0">
-
-                    <li class="nav-item "><a class="nav-link " href="{{$my_setting->insta_link}}" title="instagram"><i class="fab fa-instagram"></i>  </a></li>
-                    <li class="nav-item "><a class="nav-link " href="{{$my_setting->tw_link}}" title="twitter"><i class="fab fa-twitter"></i>  </a></li>
-                    <li class="nav-item "><a class="nav-link " href="tel:{{$my_setting->contact_phone}}" title="call us"><i class="fas fa-phone"></i>  </a></li>
-                    <li class="nav-item "><a class="nav-link " href="{{$my_setting->yt_link}}" title="youtube"><i class="fab fa-youtube"></i>  </a></li>
-
-                </ul>
-
-
-            </nav>
-        </div>
-        <div class="clearfix"></div>
-    </div></div>
-
 <!--- -->
-<div class="container-fluid  border-main sticky-top bg-w">
-    <div class="container  ">
+<div class="container-fluid  border-main sticky-top " style="background:#c98863">
+    <div class="  ">
         <div class="row  ">
             <nav class="navbar navbar-expand-lg col-12" id="start">
                 <a  href="{{route('home.index')}}" class="p-2">
@@ -76,6 +46,7 @@
 
                         <li class="nav-item "><a class="nav-link " href="{{route('services')}}" >@lang('site.services')</a></li>
                         <li class="nav-item "><a class="nav-link " href="{{route('all_posts')}}" >@lang('site.post')</a></li>
+                        <li class="nav-item "><a class="nav-link " href="{{route('bouquet')}}" >@lang('site.bouquet')</a></li>
                         <li class="nav-item "><a class="nav-link " href="{{route('about.index')}}" >@lang('site.about')</a></li>
                         {{-- <li class="nav-item">
                             <div class="dropdown nav-link" >

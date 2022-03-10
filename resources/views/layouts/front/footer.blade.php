@@ -49,6 +49,18 @@
     </div>
 
 </footer>
+   <!-- The Modal -->
+   <div id="myModal11" class="modal11">
+
+    <!-- The Close Button -->
+    <span class="close11">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content11" id="img0111">
+
+    <!-- Modal Caption (Image Text) -->
+</div>
+
 
 
 
@@ -85,6 +97,47 @@
 <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
 <script src="{{ asset('front/js/counterup.min.js') }}"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+
+
+    // Get the modal
+    var modal = document.getElementById("myModal11");
+    var img = $('#myImg').val()
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    // var img = document.getElementById("myImg");
+    // var img = document.getElementsByClassName("myImg");
+    console.log(`Hello`);
+    console.log(img);
+    var modalImg = document.getElementById("img0111");
+
+    $(".img-modal").click(function() {
+        console.log('click on img');
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    });
+    $("#hhh").click(function() {
+        console.log('click on img');
+
+    });
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close11")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    // span.onclick = function() {
+    //     modal.style.display = "none";
+    // }
+    $(span).click(function() {
+        modal.style.display = "none";
+
+    });
+});
+
+</script>
+
 <script>
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
